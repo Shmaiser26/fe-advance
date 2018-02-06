@@ -1,0 +1,54 @@
+html {
+  box-sizing: border-box;
+}
+
+.main {
+    background-color: lightslategray;
+    display: flex;
+}
+.user-card {
+    display: flex;
+    width: 20%;
+    background-size: cover;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    outline: 1px solid red;
+}
+
+.name {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    display: block;
+}
+
+.adress {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-style: italic;
+    display: block;
+}
+.user-photo {
+background-size: cover;
+
+}
+.icons-block {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-size: 16px;
+}
+
+.icons-block:first-child::before {
+    content: 'img/002-strawberry.svg';
+    width: 20px;
+    height: 20px;
+}
+
+.icons-block:nth-child(2)::before {
+    content: 'img/001-lime.svg';
+    width: 20px;
+    height: 20px;
+}
