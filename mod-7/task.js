@@ -8,10 +8,12 @@ const user_card = document.createElement('div');
 user_card.classList.add('user-card');
 
 const image = document.createElement('img');
+image.setAttribute('src', 'img/girl-scarf-portrait.jpg');
 image.classList.add('image');
 
 const name = document.createElement('span');
 name.classList.add('text');
+name.textContent = "Claudia Cardinale";
 
 const adress = document.createElement('span');
 adress.classList.add('text');
@@ -31,8 +33,8 @@ const icon_c = document.createElement('li');
 icon_c.classList.add('icons');
 icon_c.classList.add('icon-c::before');
 
-body.appendChild(container);
-container.appendChild(user_card);
-user_card.appendChild(image, name, adress, icons_block);
+body.append(container);
+container.append(user_card);
+user_card.append(image, name, adress, icons_block);
 icons_block.append(icon_a, icon_b, icon_c);
 console.log(body);
