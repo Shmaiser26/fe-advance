@@ -17,12 +17,12 @@
     color: gray;
 }
 
-img {
+.iamge {
     width: 100%;
     height: 100%;
 }
 
-span {
+.text {
     display: block;
     text-align: center;
 }
@@ -47,7 +47,7 @@ span {
     position: relative;
 }
 
-.icons-a::before {
+.icon-a::before {
     content: '';
     background-image: url(img/002-strawberry.svg);
     position: absolute;
@@ -56,7 +56,7 @@ span {
     transform: translateX(-15px);
 }
 
-.icons-b::before {
+.icon-b::before {
     content: '';
     background-image: url(img/001-lime.svg);
     position: absolute;
@@ -64,7 +64,7 @@ span {
     height: 15px;
     transform: translateX(-20px);
 }
-.icons-c::before {
+.icon-c::before {
     content: '';
     background-image: url(img/pointing-right.svg);
     position: absolute;
