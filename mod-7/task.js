@@ -111,16 +111,30 @@ const moses = {
   lemons: 22
 };
 
-function createUserCard(user) {
-    const body = document.querySelector('body');
-    body.classList.add("main");
-  body.insertAdjacentHTML(
+function createUserCard(user, parent) {
+  parent.insertAdjacentHTML(
     "afterbegin",
-    `<div class="user-card"><img class="user-photo" src="${this.img}" alt="User photo"><div class="user-info"><span class="name">${this.name}</span><span class="age">${this.age}</span><span class="dot"> · </span><span class="adress">${this.location}</span><div class="successes"><span class="strawberrys">${this.strawberryes}</span><span class="lemons">${this.lemons}</span><a href="#"><img class="enter" src="img/003-pointing-right.png" alt="enter"></a></div></div></div>`
-  );
+   `<div class="user-card"><img class="user-photo" src="${
+      this.img
+    }" alt="User photo"><div class="user-info"><span class="name">${
+      this.name
+    }</span><span class="age">${
+      this.age
+    }</span><span class="dot"> · </span><span class="adress">${
+      this.location
+    }</span><div class="successes"><span class="strawberrys">${
+      this.strawberryes
+    }</span><span class="lemons">${
+      this.lemons
+    }</span><a href="#"><img class="enter" src="img/003-pointing-right.png" alt="enter"></a></div></div></div>`  
+    );
 }
+const body = document.querySelector("body");
+body.classList.add("main");
+const container = document.createElement("div");
+container.classList.add("container");
+body.append(container);
 
-createUserCard(claudia);
-createUserCard(hanna);
-createUserCard(moses);
-
+createUserCard(claudia, container);
+createUserCard(hanna, container);
+createUserCard(moses, container);
