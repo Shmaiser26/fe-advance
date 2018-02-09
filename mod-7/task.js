@@ -1,7 +1,12 @@
 //Task 1
-/*function createUserCard() {
+/*
+function createUserCard() {
   const body = document.querySelector("body");
   body.classList.add("main");
+
+  const container = document.createElement("div");
+  container.classList.add("container");
+ 
 
   const user_card = document.createElement("div");
   user_card.classList.add("user-card");
@@ -49,7 +54,8 @@
   enter.setAttribute("src", "img/003-pointing-right.png");
   enter.setAttribute("alt", "enter");
 
-  body.append(user_card);
+  body.append(container);
+  container.append(user_card);
   user_card.append(photo, info);
   info.append(name, age, dot, adress, successes);
   successes.append(strawberrys, lemons, link);
@@ -61,11 +67,13 @@ createUserCard();
 // Task 2
 
 function createUserCardTags() {
-  const card = document.querySelector(".user-card");
+  const card = document.querySelector(".container");
   console.log(card.innerHTML);
 }
 createUserCardTags();
 */
+/*
+
 function User(img, name, age, location, strawberryes, lemons) {
   this.img = img;
   this.name = name;
@@ -74,22 +82,45 @@ function User(img, name, age, location, strawberryes, lemons) {
   this.strawberryes = strawberryes;
   this.lemons = lemons;
 }
+*/
 
-const Claudia = new User(
-  "link/to/user-image",
-  "Claudia Cardinale",
-  29,
-  "Philadelphia, PA",
-  19,
-  5
-);
+const claudia = {
+  img: "https://loremflickr.com/320/320/dog",
+  name: "Claudia Cardinale",
+  age: 29,
+  location: "Philadelphia, PA",
+  strawberries: 19,
+  lemons: 5
+};
+
+const hanna = {
+  img: "https://loremflickr.com/320/320/dog",
+  name: "Hanna Cardinale",
+  age: 23,
+  location: "Philadelphia, PA",
+  strawberries: 32,
+  lemons: 6
+};
+
+const moses = {
+  img: "https://loremflickr.com/320/320/dog",
+  name: "Moses",
+  age: 100,
+  location: "Philadelphia, PA",
+  strawberries: 22,
+  lemons: 22
+};
 
 function createUserCard(user) {
     const body = document.querySelector('body');
-  return body.insertAdjacentHTML(
+    body.classList.add("main");
+  body.insertAdjacentHTML(
     "afterbegin",
-    '<img class="user-photo" src="${this.img}" alt="User photo"><div class="user-info"><span class="name">${this.name}</span><span class="age">${this.age}</span><span class="dot"> · </span><span class="adress">${this.adress}</span><div class="successes"><span class="strawberryes">${this.straw}</span><span class="lemons">#{this.lemons}</span><a href="#"><img class="enter" src="img/003-pointing-right.png" alt="enter"></a></div></div>'
+    `<div class="user-card"><img class="user-photo" src="${this.img}" alt="User photo"><div class="user-info"><span class="name">${this.name}</span><span class="age">${this.age}</span><span class="dot"> · </span><span class="adress">${this.location}</span><div class="successes"><span class="strawberrys">${this.strawberryes}</span><span class="lemons">${this.lemons}</span><a href="#"><img class="enter" src="img/003-pointing-right.png" alt="enter"></a></div></div></div>`
   );
 }
 
-createUserCard(Claudia)();
+createUserCard(claudia);
+createUserCard(hanna);
+createUserCard(moses);
+
