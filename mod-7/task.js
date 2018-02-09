@@ -83,7 +83,7 @@ function User(img, name, age, location, strawberryes, lemons) {
   this.lemons = lemons;
 }
 */
-
+/*
 const claudia = {
   img: "https://loremflickr.com/320/320/dog",
   name: "Claudia Cardinale",
@@ -131,6 +131,72 @@ function createUserCard(user, parent) {
     );
 }
 
+
+const body = document.querySelector("body");
+body.classList.add("main");
+const container = document.createElement("div");
+container.classList.add("container");
+body.append(container);
+
+createUserCard(claudia, container);
+createUserCard(hanna, container);
+createUserCard(moses, container);
+*/
+
+function User(img, name, age, location, strawberries, lemons) {
+  this.img = img;
+  this.name = name;
+  this.age = age;
+  this.location = location;
+  this.strawberries = strawberries;
+  this.lemons = lemons;
+};
+
+const claudia = new User(
+  "https://loremflickr.com/320/320/dog",
+  "Claudia Cardinale",
+  29,
+  "Philadelphia, PA",
+  19,
+  5
+);
+
+const hanna = new User(
+  "https://loremflickr.com/320/320/cat",
+  "Hanna Cardinale",
+  23,
+  "Philadelphia, PA",
+  32,
+  6
+);
+
+const moses = new User(
+  "https://loremflickr.com/320/320/racoon",
+  "Moses",
+  100,
+  "Philadelphia, PA",
+  22,
+  22
+);
+
+function createUserCard(user, parent) {
+  parent.insertAdjacentHTML(
+    "afterbegin",
+    `<div class="user-card"><img class="user-photo" src="${
+      this.img
+    }" alt="User photo"><div class="user-info"><span class="name">${
+      this.name
+    }</span><span class="age">${
+      this.age
+    }</span><span class="dot"> · </span><span class="adress">${
+      this.location
+    }</span><div class="successes"><span class="strawberrys">${
+      this.strawberries
+    }</span><span class="lemons">${
+      this.lemons
+    }</span><a href="#"><img class="enter" src="img/003-pointing-right.png" alt="enter"></a></div></div></div>`
+  );
+};
 
 const body = document.querySelector("body");
 body.classList.add("main");
