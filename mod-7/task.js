@@ -94,7 +94,7 @@ const claudia = {
 };
 
 const hanna = {
-  img: "https://loremflickr.com/320/320/dog",
+  img: "https://loremflickr.com/320/320/cat",
   name: "Hanna Cardinale",
   age: 23,
   location: "Philadelphia, PA",
@@ -103,7 +103,7 @@ const hanna = {
 };
 
 const moses = {
-  img: "https://loremflickr.com/320/320/dog",
+  img: "https://loremflickr.com/320/320/racoon",
   name: "Moses",
   age: 100,
   location: "Philadelphia, PA",
@@ -111,24 +111,27 @@ const moses = {
   lemons: 22
 };
 
+
 function createUserCard(user, parent) {
   parent.insertAdjacentHTML(
     "afterbegin",
    `<div class="user-card"><img class="user-photo" src="${
-      this.img
+    user.img
     }" alt="User photo"><div class="user-info"><span class="name">${
-      this.name
+      user.name
     }</span><span class="age">${
-      this.age
+      user.age
     }</span><span class="dot"> · </span><span class="adress">${
-      this.location
+      user.location
     }</span><div class="successes"><span class="strawberrys">${
-      this.strawberryes
+      user.strawberries
     }</span><span class="lemons">${
-      this.lemons
+      user.lemons
     }</span><a href="#"><img class="enter" src="img/003-pointing-right.png" alt="enter"></a></div></div></div>`  
     );
 }
+
+
 const body = document.querySelector("body");
 body.classList.add("main");
 const container = document.createElement("div");

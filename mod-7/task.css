@@ -1,10 +1,11 @@
 .main {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    width: 80%;
     padding: 50px;
 }
 .user-card {
@@ -52,24 +53,3 @@
     display: block;
     background-image: url('img/003-pointing-right.png');
 }
-
-/*
-.icon-a {
-    background-image: url(img/002-strawberry.svg);
-    width: 15px;
-    height: 15px;
-    transform: translateX(-50%);
-}
-
-.icon-b {
-    background-image: url(img/001-lime.svg);
-    width: 15px;
-    height: 15px;
-}
-
-.icon-c {
-    background-image: url(img/pointing-right.svg);    position: absolute;
-    width: 18px;
-    height: 18px;
-}
-*/
