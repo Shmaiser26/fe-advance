@@ -72,17 +72,6 @@ function createUserCardTags() {
 }
 createUserCardTags();
 */
-/*
-
-function User(img, name, age, location, strawberryes, lemons) {
-  this.img = img;
-  this.name = name;
-  this.age = age;
-  this.location = location;
-  this.strawberryes = strawberryes;
-  this.lemons = lemons;
-}
-*/
 
 const claudia = {
   img: "https://loremflickr.com/320/320/dog",
