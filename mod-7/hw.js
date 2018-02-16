@@ -9,18 +9,21 @@
 const topRow = "qwertyuiop[]";
 const middleRow = "asdfghjkl;'";
 const bottomRow = "zxcvbnm,./";
-
 const body = document.querySelector("body");
+
+
 function createLayout(str) {
-  const row = document.createElement("div");
+  const row = document.createElement("ul");
   row.classList.add("row");
   body.append(row);
-  for (let i = 0, lm = str.length; i < lm; i += 1) {
-    let button = `<li class ="button">${str.charAt(i)}</li>`;
-    row.insertAdjacentHTML('beforeend', button);
-  }
- 
+  
+  const buttons = str.split('').reduce((n, i) => n + '<li>' + i + '</li>', '');
+    row.insertAdjacentHTML('beforeend', buttons);
+
+
 }
+
+
 createLayout(topRow);
 createLayout(middleRow);
 createLayout(bottomRow);
